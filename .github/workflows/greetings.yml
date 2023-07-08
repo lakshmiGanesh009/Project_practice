@@ -5,7 +5,10 @@ on:
       branches : ["master"]
 jobs:
   greeting:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/first-interaction@v1
     - name: List files
