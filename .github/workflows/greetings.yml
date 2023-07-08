@@ -7,7 +7,7 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-    - uses: action/checkout@v1 
+    - uses: action/checkout@v3
     - name: List files
       run: ls -ltr
     - name: Echo simple message
